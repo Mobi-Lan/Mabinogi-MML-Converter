@@ -83,13 +83,8 @@ MIT License - 자유롭게 사용, 수정, 배포 가능
 
 ---
 
-## 🤝 기여
-
-버그 제보 및 기능 제안 환영합니다!
-
----
-
 ## 📞 문의
 
 제작: 란님, 알리사  
 AI 지원: Antigravity (Google Deepmind)
+
