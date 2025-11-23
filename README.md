@@ -5,6 +5,9 @@ AI 기반 음악 파일을 마비노기 MML로 자동 변환하는 웹 도구
 **Made by 란님 | 알리사**  
 **Powered by Antigravity**
 
+<img width="2175" height="1191" alt="MabinogiMobile_2025112316032342" src="https://github.com/user-attachments/assets/f43e8af0-d431-4940-ad54-e94ec5bbce2f" />
+
+
 ---
 
 ## ✨ 주요 기능
@@ -87,4 +90,5 @@ MIT License - 자유롭게 사용, 수정, 배포 가능
 
 제작: 란님, 알리사  
 AI 지원: Antigravity (Google Deepmind)
+
 
