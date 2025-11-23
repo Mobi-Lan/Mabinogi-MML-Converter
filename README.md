@@ -81,6 +81,7 @@ AI 기반 음악 파일을 마비노기 MML로 자동 변환하는 웹 도구
 ## 📄 라이선스
 
 MIT License - 자유롭게 사용, 수정, 배포 가능
+
 Powered by Google Magenta (Apache License 2.0)
 
 자세한 내용은 [LICENSE.md](LICENSE.md) 참조
@@ -91,6 +92,7 @@ Powered by Google Magenta (Apache License 2.0)
 
 제작: 란님, 알리사  
 AI 지원: Antigravity (Google Deepmind)
+
 
 
 
