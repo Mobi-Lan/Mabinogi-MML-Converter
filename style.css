@@ -1,0 +1,353 @@
+:root {
+    --bg-color: #121212;
+    --card-bg: #1e1e1e;
+    --input-bg: #2c2c2c;
+    --text-primary: #ffffff;
+    --text-secondary: #b0b0b0;
+    --accent-color: #0DB376;
+    --danger-color: #ff5252;
+    --border-radius: 16px;
+    --spacing: 16px;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-primary);
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+    padding-bottom: 80px;
+    /* Space for bottom bar */
+}
+
+.app-container {
+    width: 100%;
+    max-width: 480px;
+    /* Mobile width */
+    padding: var(--spacing);
+}
+
+/* Header */
+.header-section {
+    margin-bottom: 24px;
+}
+
+.title-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+.section-label {
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+.toggle-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+}
+
+/* Switch */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 40px;
+    height: 24px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #555;
+    transition: .4s;
+    border-radius: 24px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 18px;
+    width: 18px;
+    left: 3px;
+    bottom: 3px;
+    background-color: white;
+    transition: .4s;
+    border-radius: 50%;
+}
+
+input:checked+.slider {
+    background-color: var(--text-secondary);
+}
+
+input:checked+.slider:before {
+    transform: translateX(16px);
+}
+
+/* Input Wrapper */
+.input-wrapper {
+    position: relative;
+    margin-bottom: 8px;
+}
+
+.input-wrapper input {
+    width: 100%;
+    background-color: var(--input-bg);
+    border: none;
+    border-radius: var(--border-radius);
+    padding: 14px 40px 14px 16px;
+    color: var(--text-primary);
+    font-size: 1rem;
+}
+
+.input-wrapper input:focus {
+    outline: 1px solid var(--accent-color);
+}
+
+.clear-btn {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    color: var(--text-secondary);
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+.composer-label {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+}
+
+#composer-name {
+    color: var(--text-primary);
+    font-weight: bold;
+}
+
+/* Upload & Controls */
+.upload-section {
+    background-color: var(--input-bg);
+    border-radius: var(--border-radius);
+    padding: 20px;
+    text-align: center;
+    cursor: pointer;
+    margin-bottom: 16px;
+    border: 2px dashed #444;
+    transition: border-color 0.3s;
+}
+
+.upload-section:hover {
+    border-color: var(--accent-color);
+}
+
+.controls-area {
+    margin-bottom: 24px;
+}
+
+.control-row {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+    align-items: center;
+}
+
+.time-input,
+.bpm-input,
+.quant-select {
+    background-color: var(--input-bg);
+    border: none;
+    border-radius: 8px;
+    padding: 10px;
+    color: var(--text-primary);
+    flex: 1;
+    text-align: center;
+}
+
+.action-btn {
+    width: 100%;
+    padding: 12px;
+    border-radius: var(--border-radius);
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.action-btn.primary {
+    background-color: var(--accent-color);
+    color: #fff;
+}
+
+.action-btn.secondary {
+    background-color: #333;
+    color: var(--text-primary);
+}
+
+/* MML Cards */
+.mml-card {
+    background-color: transparent;
+    margin-bottom: 16px;
+}
+
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+.icon-label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.speaker-icon {
+    background-color: var(--accent-color);
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #000;
+    font-size: 0.8rem;
+}
+
+.part-name {
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+.char-count {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+}
+
+.card-body {
+    position: relative;
+}
+
+.card-body textarea {
+    width: 100%;
+    height: 100px;
+    background-color: var(--input-bg);
+    border: none;
+    border-radius: var(--border-radius);
+    padding: 16px;
+    color: var(--text-primary);
+    font-size: 0.9rem;
+    resize: none;
+    line-height: 1.4;
+}
+
+.close-btn,
+.copy-btn {
+    position: absolute;
+    right: 12px;
+    top: 12px;
+    background: #333;
+    border: none;
+    color: white;
+    font-size: 0.8rem;
+    cursor: pointer;
+    padding: 4px 8px;
+    border-radius: 4px;
+}
+
+/* Bottom Bar */
+.bottom-bar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 16px;
+    background: linear-gradient(to top, var(--bg-color) 80%, transparent);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+}
+
+.bottom-content {
+    width: 100%;
+    max-width: 480px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.ai-credit {
+    font-size: 0.7rem;
+    color: var(--text-secondary);
+    margin-bottom: 8px;
+    opacity: 0.6;
+    font-weight: 300;
+    letter-spacing: 0.5px;
+}
+
+.create-btn {
+    width: 100%;
+    max-width: 480px;
+    background-color: var(--accent-color);
+    color: #fff;
+    border: none;
+    border-radius: var(--border-radius);
+    padding: 16px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0, 230, 118, 0.3);
+}
+
+.error-banner {
+    background-color: rgba(255, 82, 82, 0.1);
+    color: var(--danger-color);
+    padding: 10px;
+    border-radius: 8px;
+    margin-bottom: 16px;
+    text-align: center;
+    font-weight: bold;
+}
+
+/* Track List Items */
+.track-item {
+    background: var(--card-bg);
+    padding: 10px;
+    border-radius: 8px;
+    margin-bottom: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.track-item select {
+    background: #333;
+    color: white;
+    border: none;
+    padding: 5px;
+    border-radius: 4px;
+}
