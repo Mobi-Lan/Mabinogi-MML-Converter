@@ -1067,9 +1067,9 @@
                 const volHarmony2 = parseInt(document.getElementById('vol-harmony2').value) || 15;
 
                 const mmlOutput = {
-                    melody: convertNotesToMML(lanes[0].notes, volMelody),
-                    harmony1: convertNotesToMML(lanes[1].notes, volHarmony1),
-                    harmony2: convertNotesToMML(lanes[2].notes, volHarmony2)
+                    melody: convertNotesToMML(lanes[0].notes, volMelody, userBpm),
+                    harmony1: convertNotesToMML(lanes[1].notes, volHarmony1, userBpm),
+                    harmony2: convertNotesToMML(lanes[2].notes, volHarmony2, userBpm)
                 };
 
                 updateResult(mmlOutput.melody, mmlOutput.harmony1, mmlOutput.harmony2);
@@ -1108,18 +1108,13 @@
 
         // --- Core Conversion Logic ---
 
-        function convertNotesToMML(allNotes, maxVolume = 15) {
+        function convertNotesToMML(allNotes, maxVolume = 15, bpm = 120) {
             if (!allNotes || allNotes.length === 0) return "MML@;";
 
             // Sort by time (just in case)
             allNotes.sort((a, b) => a.time - b.time);
 
             if (allNotes.length === 0) return "MML@;";
-
-            // Safe BPM access
-            const bpm = (currentMidi && currentMidi.header && currentMidi.header.tempos && currentMidi.header.tempos.length > 0)
-                ? currentMidi.header.tempos[0].bpm
-                : 120;
 
             // --- Optimization: Find Best Default Length (l) ---
             const durationCounts = {};
