@@ -1,6 +1,6 @@
 # 🎵 Mabinogi MML Converter (v6)
 
-AI 기반 음악 파일을 마비노기 MML로 자동 변환하는 웹 도구
+AI 기반 음악 파일을 마비노기 MML로 1멜로디, 2화음 이하로 변환 하는 도구.
 
 **Made by 란님 | 알리사**  
 **Powered by Antigravity**
@@ -92,6 +92,7 @@ Powered by Google Magenta (Apache License 2.0)
 
 제작: 란님, 알리사  
 AI 지원: Antigravity (Google Deepmind)
+
 
 
 
