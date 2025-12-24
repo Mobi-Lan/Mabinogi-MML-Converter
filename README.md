@@ -1,4 +1,14 @@
+해당 git 은 더이상의 수정은 없습니다.
+
+https://mobimml.com/ 
+
+에서 확인하세요!
+
+
 # 🎵 Mabinogi MML Converter (v6)
+
+
+
 
 AI 기반 음악 파일을 마비노기 MML로 1멜로디, 2화음 이하로 변환 하는 도구.
 
@@ -92,6 +102,7 @@ Powered by Google Magenta (Apache License 2.0)
 
 제작: 란님, 알리사  
 AI 지원: Antigravity (Google Deepmind)
+
 
 
 
